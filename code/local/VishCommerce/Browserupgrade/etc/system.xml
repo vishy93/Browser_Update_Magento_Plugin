@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<web>
+			<groups>
+				<browserupgrade translate="label">
+					<label>Browser upgrade notice</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>6</sort_order>
+					<fields>
+						<enabled translate="label">
+							<label>Enable notice</label>
+							<comment><![CDATA[Enables or disables the notice completely.]]></comment>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+						</enabled>
+						<autoupdate translate="label">
+							<label>Enable auto update</label>
+							<comment><![CDATA[Note; when enabled you will not be able to specify the minimum browser version required. Browser-update.org will determine the least acceptable version for the browser used.]]></comment>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+						</autoupdate>
+						<ieminversion>
+							<label>IE supported versions</label>
+							<comment><![CDATA[The last version of Internet Explorer NOT supported.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>RapidCommerce_Browserupgrade_Model_Ie</source_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><autoupdate>0</autoupdate></depends>
+						</ieminversion>
+						<firefoxminversion>
+							<label>Firefox supported versions</label>
+							<comment><![CDATA[The last version of Firefox NOT supported.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>RapidCommerce_Browserupgrade_Model_Firefox</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><autoupdate>0</autoupdate></depends>
+						</firefoxminversion>
+						<operaminversion>
+							<label>Opera supported versions</label>
+							<comment><![CDATA[The last version of Opera NOT supported.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>RapidCommerce_Browserupgrade_Model_Opera</source_model>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><autoupdate>0</autoupdate></depends>
+						</operaminversion>
+						<safariminversion>
+							<label>Safari supported versions</label>
+							<comment><![CDATA[The last version of Safari NOT supported.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>RapidCommerce_Browserupgrade_Model_Safari</source_model>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><autoupdate>0</autoupdate></depends>
+						</safariminversion>
+
+						<reminder translate="label">
+							<label>Reminder (hours)</label>
+							<comment><![CDATA[Atfer how many hours should the message reappear, 0 = show all the time]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</reminder>
+						<alwaysshow translate="label">
+							<label>Always show this notice (debug design)</label>
+							<comment><![CDATA[Enables you to test the notice, do not use this option in production.]]></comment>
+							<sort_order>8</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+						</alwaysshow>
+						<usenewwindow translate="label">
+							<label>Open link in new window</label>
+							<comment><![CDATA[Open the link to browser-upgrade.org in a new window.]]></comment>
+							<sort_order>9</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+						</usenewwindow>
+
+
+						<usecustomtext translate="label">
+							<label>Use custom text</label>
+							<comment><![CDATA[Whether to use a custom notice text for this storeview.]]></comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+						</usecustomtext>
+						<customtext translate="label">
+							<label>Custom text</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><usecustomtext>1</usecustomtext></depends>
+						</customtext>
+
+						<forcespecificlanguage translate="label">
+							<label>Force language</label>
+							<comment><![CDATA[Whether to force a specific language. This will override default browser-update.org language detection. ]]></comment>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+						</forcespecificlanguage>
+						<specificlanguage translate="label">
+							<label>Custom language</label>
+							<comment><![CDATA[Set a language for the message, e.g. "en" ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><forcespecificlanguage>1</forcespecificlanguage></depends>
+						</specificlanguage>
+
+					</fields>
+				</browserupgrade>
+			</groups>
+		</web>
+	</sections>
+</config>

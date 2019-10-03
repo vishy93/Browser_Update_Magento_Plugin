@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<VishCommerce_Browserupgrade>
+			<version>1.0.0</version>
+		</VishCommerce_Browserupgrade>
+	</modules>
+	
+	<global>
+		<blocks>
+			<browserupgrade>
+				<class>VishCommerce_Browserupgrade_Block</class>
+			</browserupgrade>
+		</blocks>
+		<helpers>
+			<browserupgrade>
+				<class>VishCommerce_Browserupgrade_Helper</class>
+			</browserupgrade>
+		</helpers>
+	</global>
+	
+	<frontend>
+		<layout>
+			<updates>
+				<vishcommerce_browserupgrade>
+					<file>browserupgrade.xml</file>
+				</vishcommerce_browserupgrade>
+			</updates>
+		</layout>
+		
+		<translate>
+			<modules>
+				<VishCommerce_Browserupgrade>
+					<files>
+						<default>VishCommerce_Browserupgrade.csv</default>
+					</files>
+				</VishCommerce_Browserupgrade>
+			</modules>
+		</translate>
+	</frontend>
+
+	<adminhtml>
+		<translate>
+			<modules>
+				<VishCommerce_Browserupgrade>
+					<files>
+						<default>VishCommerce_Browserupgrade.csv</default>
+					</files>
+				</VishCommerce_Browserupgrade>
+			</modules>
+		</translate>
+	</adminhtml>
+	
+	<default>
+		<web>
+			<browserupgrade>
+				<enabled>0</enabled>
+				<autoupdate>1</autoupdate>
+				<reminder>24</reminder>
+			</browserupgrade>
+		</web>
+	</default>
+</config>
